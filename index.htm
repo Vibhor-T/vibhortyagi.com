@@ -7,7 +7,7 @@
   <meta name="keywords" content="Vibhor Tyagi, VibhorTyagi, Vitya, Petrolhead, Cosmic-Conscious, Polymath, TheAutomotiveIndia">
   <meta name="author" content="Vibhor Tyagi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/HwP3d2IfuYQJ7L0p82R8m8e8m+W/A/2NfC+M3P+P9LzO7q3Gq5wD9R0A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/Vibhor-T/vibhortyagi.com/refs/heads/main/favicon.ico"/>
 
@@ -21,6 +21,44 @@ body {
   text-align: center;
   color: white;
 }
+.social-button { 
+            transition: transform 0.2s ease-in-out; 
+            height: 45px; 
+            width: 45px;
+            font-size: 20px; 
+            display: inline-flex; 
+            color: #FFF; 
+            border-radius: 5px; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Added shadow based on the original Tailwind class 'shadow-md' */
+            text-decoration: none; /* Important: removes underline from links */
+        } 
+        
+        .social-button:hover { 
+            transform: scale(1.1);
+            color: #FFF; 
+        }
+
+        .social-icons-container {
+            display: flex; 
+            justify-content: center;
+            gap: 1rem; /* This replaces 'space-x-4' */
+        }
+
+        /* Custom styles for each social media icon color */ 
+        .facebook-bg { background-color: #3b5998; }
+        .facebook-bg:hover { background-color: #344e86; } 
+        
+        /* Note: Using 'x-twitter' class name for the X icon */
+        .x-twitter-bg { background-color: #000000; } 
+        .x-twitter-bg:hover { background-color: #222222; }
+
+        .instagram-bg { background-color: #E1306C; }
+        .instagram-bg:hover { background-color: #c91b58; }
+        
+        .linkedin-bg { background-color: #0e76a8; }
+        .linkedin-bg:hover { background-color: #0c6a95; }
 </style>
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c433b03058f100011a5aa88&product=inline-follow-buttons' async='async'></script>
 
@@ -47,5 +85,23 @@ body {
 <p>www.theautomotiveindia.com</p>
 
 <div class="sharethis-inline-follow-buttons"></div></body></html>
+<div class="social-icons-container"> 
+    
+    <a href="https://www.facebook.com/TheAutomotiveIndia" target="_blank" class="social-button facebook-bg"> 
+        <i class="fa-brands fa-facebook-f"></i>
+    </a> 
+    
+    <a href="https://x.com/theautomotive" target="_blank" class="social-button x-twitter-bg"> 
+        <i class="fa-brands fa-x-twitter"></i> 
+    </a> 
+    
+    <a href="https://www.instagram.com/theautomotiveindia" target="_blank" class="social-button instagram-bg"> 
+        <i class="fa-brands fa-instagram"></i> 
+    </a> 
+    
+    <a href="https://www.linkedin.com/company/the-automotive-india" target="_blank" class="social-button linkedin-bg"> 
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+</div>
 
 
