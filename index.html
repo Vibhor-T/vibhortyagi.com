@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vibhor Tyagi | Official Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official website of Vibhor Tyagi. Petrolhead | Cosmic Conscious | Polymath.">
+    <meta name="author" content="Vibhor Tyagi">
+    
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/Vibhor-T/vibhortyagi.com/refs/heads/main/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: black; background-image: url("https://raw.githubusercontent.com/Vibhor-T/vibhortyagi.com/refs/heads/main/bg.jpg"); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover; color: #e0e0e0; text-align: center; line-height: 1.6; }
+
+        .hero { padding: 80px 20px 30px 20px; display: flex; flex-direction: column; align-items: center; }
+        .hero img { width: 200px; margin-bottom: 15px; }
+        .hero h1 { margin: 10px 0; font-size: 2.5rem; color: white; letter-spacing: -0.02em; }
+        .hero p { margin: 5px 0; color: #fff; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; text-shadow: 0 2px 3px rgba(0,0,0,0.6); }
+
+        strong { color: #ffffff; font-weight: 700; }
+
+        .social-icons-container { display: flex; justify-content: center; gap: 1rem; margin-top: 20px; }
+        .social-button { transition: transform 0.2s ease-in-out; height: 45px; width: 45px; font-size: 20px; display: inline-flex; color: #FFF; border-radius: 5px; align-items: center; justify-content: center; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); text-decoration: none; }                 
+        .social-button:hover { transform: scale(1.1); }
+        
+        .facebook-bg { background-color: #3b5998; }
+        .x-twitter-bg { background-color: #000000; } 
+        .instagram-bg { background-color: #E1306C; }
+        .linkedin-bg { background-color: #0e76a8; }
+
+        .tabs-container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px 20px; text-align: left; }
+        input[type="radio"] { display: none; }
+        
+        .tab-labels { display: flex; justify-content: center; margin-bottom: 0; padding: 0; }
+        .tab-labels label { flex: 1; text-align: center; background: #1a1a1a; border: 1px solid #333; color: #666; cursor: pointer; padding: 12px 0; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; }
+        .tab-labels label:first-child { border-radius: 8px 0 0 0; }
+        .tab-labels label:last-child { border-radius: 0 8px 0 0; }
+        .tab-labels label:hover { background: #252525; color: #E2E8F0; }
+
+        .tab-panel { display: none; padding: 40px; background: #111; border-radius: 0 0 12px 12px; border: 1px solid #333; border-top: none; animation: fadeIn 0.4s; }
+        .tab-panel p { text-align: justify; }
+
+        .competencies-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        @media (max-width: 600px) { .competencies-grid { grid-template-columns: 1fr; } }
+        .comp-card { background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; }
+        .comp-card h4 { margin-top: 0; color: #E2E8F0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; }
+        .comp-card ul { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #aaa; }
+        .comp-card li { margin-bottom: 5px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        #tab1:checked ~ .tab-labels label[for="tab1"], #tab2:checked ~ .tab-labels label[for="tab2"], #tab3:checked ~ .tab-labels label[for="tab3"] { background: #111; color: #E2E8F0; border-color: #333; font-weight: bold; border-bottom: 1px solid #111; }
+        #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { display: block; }
+
+        h2 { color: #E2E8F0; font-size: 2rem; letter-spacing: -0.02em; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 25px; text-transform: uppercase; }
+        h3 { color: #E2E8F0; font-size: 1.1rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 30px; margin-bottom: 15px; }
+        
+        form { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+        input, select, textarea { padding: 12px; background: #1a1a1a; border: 1px solid #333; color: #E2E8F0; border-radius: 4px; font-family: inherit; width: 100%; box-sizing: border-box; }
+        textarea { resize: vertical; height: 160px; }
+        button[type="submit"] { padding: 15px; background: #E2E8F0; border: none; cursor: pointer; font-weight: bold; color: black; border-radius: 4px; transition: 0.3s; font-family: inherit; margin-top: 10px; }
+        button[type="submit"]:hover { background: #fff; }
+        
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <img src="https://raw.githubusercontent.com/Vibhor-T/vibhortyagi.com/refs/heads/main/pic.png" alt="Vibhor Tyagi">
+        <h1>Vibhor Tyagi</h1>
+        <p>Petrolhead | Cosmic Conscious | Polymath</p>
+        
+        <div class="social-icons-container">
+            <a href="https://www.facebook.com/TheVibhorTyagi/" target="_blank" class="social-button facebook-bg"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/thevibhortyagi_" target="_blank" class="social-button x-twitter-bg"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/thevibhortyagi/" target="_blank" class="social-button instagram-bg"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vibhortyagi" target="_blank" class="social-button linkedin-bg"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </header>
+
+    <main class="tabs-container">
+        <input type="radio" id="tab1" name="portfolio-tabs" checked>
+        <input type="radio" id="tab2" name="portfolio-tabs">
+        <input type="radio" id="tab3" name="portfolio-tabs">
+
+        <div class="tab-labels">
+            <label for="tab1">About</label>
+            <label for="tab2">Collaborate</label>
+            <label for="tab3">Connect</label>
+        </div>
+
+        <div id="content1" class="tab-panel">
+            <h2>About</h2>
+            <h3>The Automotive Lens</h3>
+            <p>I have been a die-hard car fanatic since birth. My conscious immersion into the industry began in the early 2000s—not as a career, but as a genuine obsession. Fueled by magazines, broadcasts, and forums, this engagement evolved from private passion to public contribution with the 2008 launch of <strong>theautomotiveindia.com</strong>. Over nearly two decades, my focus has shifted from the metal and specs to the <strong>human experience behind the wheel</strong>. I see cars not just as machines, but as a reflection of the people who drive them.</p>
+
+            <h3>The Cognitive Foundation</h3>
+            <p>Parallel to this, my life has been defined by what lies beneath the surface. My foundation is built on a <strong>synthesis of over 80 disciplines</strong>—spanning the spiritual, metaphysical, and universal, to the sciences of the mind and human behavior. This breadth of knowledge is sustained by a state of cosmic consciousness, offering a perspective that transcends limitations of ordinary observation.</p>
+
+            <h3>Methodology & Worldview</h3>
+            <p>Operating from this vantage point, I view the world through a lens of <strong>First Principles</strong>. Rather than relying on trends or generic advice, I prefer to strip complex situations down to their core components to understand how they actually function.</p>
+            <p>This synthesis of technical industry experience and a lifelong study of mental science allows me to approach problems with a perspective that is both grounded and expanded. Outside of these systems, my worldview is shaped by global travel, exploration of diverse cultures, and a steadfast commitment to wildlife conservation and prosocial initiatives. These interests are the foundation that keeps me connected to the broader picture.</p>
+        </div>
+
+        <div id="content2" class="tab-panel">
+            <h2>Collaborate</h2>
+            <h3>1. Automotive Advisory (India)</h3>
+            <p>In an industry defined by marketing noise, I provide independent, deep-dive evaluations. Whether you are navigating a complex pre-purchase decision, choosing the right car for your specific life requirements, or require guidance on delivery, I handle logic so you can focus on the experience.</p>
+            <h3>2. Clarity Consulting (Individual)</h3>
+            <p>This is an intensive look into your own blind spots. I help you see the patterns—metaphysical and behavioral—that are currently holding you back. My role is to help you see what you cannot see on your own, stripping away the noise so you can understand friction in your life and how to resolve it.</p>
+            <h3>3. Resonance Consulting (Corporate)</h3>
+            <p>This is a diagnostic intervention for automotive brands and leadership teams navigating today’s complex market landscape. I bridge the fundamental gap between rigid product strategy and the intrinsic psychology of the driver, ensuring your brand resonates on a deeper, more human level.</p>
+            
+            <h3>Key Competencies</h3>
+            <div class="competencies-grid">
+                <div class="comp-card">
+                    <h4>Human Potential</h4>
+                    <ul><li>Metaphysics</li><li>Mental Science</li><li>Spiritual Warfare</li><li>Human Behaviour</li><li>Visionary Architecture</li></ul>
+                </div>
+                <div class="comp-card">
+                    <h4>Automotive</h4>
+                    <ul><li>Sector Intelligence</li><li>Product Resonance</li><li>Automotive Reviews</li><li>Automotive Journalism</li><li>Automotive Photography</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="content3" class="tab-panel">
+            <h2>Connect</h2>
+            <p>To ensure our objectives are fully aligned, all inquiries begin with a brief diagnostic assessment. This allows us to confirm a shared vision and establish the necessary clarity before we proceed.</p>
+            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" value="contact@vibhortyagi.com" readonly style="cursor: default; opacity: 0.8; border: 1px solid #444;">
+                
+                <select id="inquiryType" name="inquiry_type" required>
+                    <option value="" disabled selected>Select Inquiry Focus</option>
+                    <option value="automotive">Automotive Advisory (India)</option>
+                    <option value="clarity">Clarity Consulting (Individual)</option>
+                    <option value="resonance">Resonance Consulting (Corporate)</option>
+                </select>
+                
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="text" name="location" placeholder="Location" required>
+                <input type="text" name="context" placeholder="Occupation" required>
+                
+                <textarea id="diagnosticField" name="diagnostic_summary" placeholder="Please choose an inquiry focus above to see the relevant diagnostic questions." required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Vibhor Tyagi</footer>
+
+    <script>
+        const inquirySelect = document.getElementById('inquiryType');
+        const diagnosticField = document.getElementById('diagnosticField');
+
+        inquirySelect.addEventListener('change', function() {
+            if (this.value === 'automotive') {
+                diagnosticField.placeholder = "Please describe in detail:\n1. Budget\n2. Fuel Type\n3. Segment Type\n4. Monthly Running\n5. Top Requirements";
+            } else if (this.value === 'clarity' || this.value === 'resonance') {
+                diagnosticField.placeholder = "Please describe in detail:\n1. Core friction or complexities to resolve.\n2. What have you tried so far and its result?\n3. What does successful outcome look like?\n4. Any other specific important information.";
+            }
+        });
+    </script>
+</body>
+</html>
