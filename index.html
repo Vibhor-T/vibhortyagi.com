@@ -158,7 +158,7 @@
 
         inquirySelect.addEventListener('change', function() {
             if (this.value === 'automotive') {
-                diagnosticField.placeholder = "Please describe in detail:\n1. Budget\n2. Fuel Type\n3. Segment Type\n4. Monthly Running\n5. Top Requirements";
+                diagnosticField.placeholder = "Please describe in detail:\n1. What is the primary purpose of this acquisition?\n2. What is your intended budget for this acquisition?\n3. What is the biggest uncertainty or commercial pressure you are trying to cut through?\n4. What specific vehicles, brands, or dealership assets are you torn between, and why?\n5. Detail driving environment, annual running, and specific standards the vehicle must meet.";
             } else if (this.value === 'clarity' || this.value === 'resonance') {
                 diagnosticField.placeholder = "Please describe in detail:\n1. Core friction or complexities to resolve.\n2. What have you tried so far and its result?\n3. What does successful outcome look like?\n4. Any other specific important information.";
             }
